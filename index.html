@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestionAire</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>QuestionAire</h1>        
+    </header>
+
+    <main class="main">
+        <div class="input_container">
+            <input type="text" placeholder="Choose your topic">
+            <button id="dropdownBtn">Topics ⏬</button>
+            <button id="randomTopicBtn">Random Topic</button>
+            <div id="dropdownMenu" class="dropdown-content" style="display:none;">
+                <a href="#">foot</a>
+                <a href="#">basket</a>
+                <a href="#">moto</a>
+                <a href="#">cards</a>
+                <a href="#">games</a>
+                <a href="#">code</a>
+                <a href="#">chess</a>
+                <!-- Add more topics as needed -->
+            </div>
+        </div>
+
+       
+
+
+        <div class="selected_difficulty">
+            Selected Difficulty: <span id="selectedDifficulty">None</span>
+        </div>
+        
+        <div class="diff_container">
+            <button class="diff_btn">Easy</button>
+            <button class="diff_btn">Medium</button>
+            <button class="diff_btn">Hard</button>
+        </div>
+        
+        
+
+        <div class="start_container">
+            <button class="start_btn">start</button>
+        </div>
+    </main>
+
+    <div id="loadingOverlay" style="display:none;">
+        <div id="loadingContent">
+            <p id="loadingText">...Loading...</p>
+            <div id="topicAndDifficulty">Topic: <span id="topicChosen"></span> | Difficulty: <span id="difficultyChosen"></span></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

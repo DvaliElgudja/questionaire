@@ -1,0 +1,172 @@
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(38,2,57,1) 0%, rgba(102,9,121,1) 47%, rgba(154,18,240,1) 100%, rgba(238,13,239,1) 100%, rgba(252,43,246,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center-align children */
+    padding: 10%;
+}
+input{
+    width: 100%;
+}
+
+input[type="text"] {
+    text-align: center; /* Aligns text in the center */
+    /* ... other styles for your input ... */
+}
+
+.diff_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+  }
+
+.diff_btn {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin: 5px;
+  }
+
+  .diff_btn.selected {
+    background-color: #4CAF50; /* Example color, change as needed */
+    color: white;
+}
+
+/* You might want to add :hover styles to indicate interactive elements */
+.diff_btn:hover {
+    background-color: #3e8e41; /* Darker shade for hover effect */
+}
+
+.start_btn:hover{
+    background-color: #3e8e41;
+    
+}
+
+button{
+    cursor: pointer;
+}
+
+
+
+  .selected_difficulty{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#selectedDifficulty{
+    color: #4CAF50;
+}
+
+  .start_btn{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+  }
+
+
+  /* Dropdown Button */
+#dropdownBtn {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+/* Style for the random topic button */
+#randomTopicBtn {
+   width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    background-color: #f1f1f1;
+    width: calc(100% - 20px); /* Adjust width as needed, subtracting padding */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    max-height: 120px; /* Set the maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+h1 {
+    background: linear-gradient(90deg, #89c15e, #e56a0d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+ /* ____________________________________________________ */
+ /* ____________________________________________________ */
+ /* ____________________________________________________ */
+
+ #loadingOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadingContent {
+    text-align: center;
+    color: white;
+}
+
+/* Simple loading animation example */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loadingText:before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-top: 3px solid #000;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.blur-background {
+    filter: blur(50px); /* Adjust the blur value as needed */
+}
